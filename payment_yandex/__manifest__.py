@@ -18,7 +18,7 @@
 				'views/payment_views.xml',
 				'data/payment_acquirer_data.xml',
 				],
-		'images': ['static/src/img/icon.png', 'static/description/banner.png'],
+		'images': ['static/description/banner.png','static/src/img/icon.png'],
 		'installable': True,
 		'post_init_hook': 'create_missing_journal_for_acquirers',
 		'uninstall_hook': 'uninstall_hook',
