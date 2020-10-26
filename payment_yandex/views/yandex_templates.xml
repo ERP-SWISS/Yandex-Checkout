@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="yandex_form">
+            <input type="hidden" name="data_set" t-att-data-action-url="tx_url" data-remove-me=""/>
+            <input type="hidden" name="yandex_confirmation_url" t-att-value="yandex_confirmation_url"/>
+            <input type="hidden" name="description" t-att-value="description"/>
+            <input type="hidden" name="amount" t-att-value="amount"/>
+            <input type="hidden" name="return_url" t-att-value='return_url'/>
+        </template>
+    </data>
+</odoo>

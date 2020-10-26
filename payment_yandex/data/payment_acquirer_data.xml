@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="payment_acquirer_yandex" model="payment.acquirer">
+            <field name="name">Yandex Checkout</field>
+            <field name="image_128" type="base64" file="payment_yandex/static/src/img/icon.png"/>
+            <field name="provider">yandex</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="view_template_id" ref="yandex_form"/>
+            <field name="pre_msg"><![CDATA[
+<p>You will be redirected to the Yandex Checkout website after clicking on the payment button.</p>]]></field>
+        </record>
+    </data>
+</odoo>
