@@ -8,7 +8,7 @@
 		`pip3 install yandex_checkout`
 	""",
 		"category": "Accounting/Payment",
-		"version": "13.1.0.0",
+		"version": "1.0.0",
 		'author': "eSwap",
 		"sequence": 1,
 		'license': 'OPL-1',
@@ -18,7 +18,7 @@
 				'views/payment_views.xml',
 				'data/payment_acquirer_data.xml',
 				],
-		'images': ['static/description/banner.png','static/src/img/icon.png'],
+		'images': ['static/description/banner.png','static/description/icon.png'],
 		'installable': True,
 		'post_init_hook': 'create_missing_journal_for_acquirers',
 		'uninstall_hook': 'uninstall_hook',
