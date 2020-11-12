@@ -14,7 +14,7 @@ _logger = logging.getLogger(__name__)
 class YandexAcquirer(models.Model):
 	_inherit = 'payment.acquirer'
 
-	provider = fields.Selection(selection_add = [('yandex', 'Yandex Checkout')])
+	provider = fields.Selection(selection_add = [('yandex', 'Yandex Checkout')], ondelete={'yandex': 'set default'})
 	yandex_shop_id = fields.Char(required_if_provider = 'yandex', groups = 'base.group_user', help = "Account ID")
 	yandex_secret_key = fields.Char(required_if_provider = 'yandex', groups = 'base.group_user', help = "Secret Key")
 
@@ -91,10 +91,6 @@ class PaymentTransactionYandexCheckout(models.Model):
 			_logger.info(error_msg)
 			raise ValidationError(error_msg)
 		return txs[0]
-
-	# def _yandex_form_get_invalid_parameters(self, data):
-	# 	invalid_parameters = []
-	# 	return invalid_parameters
 
 	def _yandex_form_validate(self, data):
 		status = data.get('status')
