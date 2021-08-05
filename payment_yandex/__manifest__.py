@@ -8,7 +8,7 @@
 		`pip3 install yandex_checkout`
 	""",
 		"category": "Accounting/Payment",
-		"version": "1.0.0",
+		"version": "1.0.1",
 		'author': "eSwap",
 		"sequence": 1,
 		'license': 'OPL-1',

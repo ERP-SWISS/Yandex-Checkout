@@ -36,7 +36,12 @@ class YandexAcquirer(models.Model):
 
 		from_currency = tx_values['currency']
 		to_currency = self.env['res.currency'].sudo().search([('name', '=', 'RUB')], limit = 1)
-		order = request.website.sale_get_order()
+
+		try:
+			order = request.website.sale_get_order()
+		except:
+			order = self.env['sale.order'].sudo().browse(request.jsonrequest['params']['order_id'])
+
 		amount = from_currency._convert(tx_values['amount'],
 		                                to_currency,
 		                                order.company_id,
